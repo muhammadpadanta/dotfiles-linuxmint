@@ -1,0 +1,141 @@
+#+TITLE: =/home/muhammadpadanta/dotfiles=
+#+AUTHOR: Muhammad Padanta
+#+DESCRIPTION: Personal dotfiles for Linux Mint development environment
+
+* Introduction
+My personal dotfiles for Linux Mint, managed with =GNU Stow= for easy symlinking and organization. This setup provides a clean, modular approach to managing various development tool configurations.
+
+#+CAPTION: Visual representation result
+[[assets/Home.png]] [[assets/Term.png]] [[assets/Others.png]]
+
+* Prerequisites
+Before setting up these dotfiles, ensure you have:
+- Linux Mint
+- Git
+- =GNU Stow=
+
+Install basic requirements:
+#+BEGIN_SRC bash
+# Install GNU Stow
+sudo apt update && sudo apt install -y stow
+#+END_SRC
+
+* Installation
+Clone and set up the dotfiles:
+#+BEGIN_SRC bash
+# Clone the repository
+git clone https://github.com/muhammadpadanta/dotfiles.git ~/dotfiles
+
+# Navigate to dotfiles directory
+cd ~/dotfiles
+
+# Create symlinks using stow
+stow */  # Install all configs
+# Or install individually:
+# stow nvim
+# stow fish
+# etc.
+#+END_SRC
+
+* Directory Structure
+#+BEGIN_SRC
+~/dotfiles/
+├── fish/           # Fish shell configuration
+│   └── .config/fish/
+├── git/            # Git configuration
+│   └── .gitconfig
+├── nvim/           # Neovim configuration
+│   └── .config/nvim/
+├── starship/       # Starship prompt configuration
+│   └── .config/starship.toml
+├── tmux/           # Tmux configuration
+│   └── .tmux.conf
+└── vscode/         # VS Code settings
+    └── .vscode/
+#+END_SRC
+
+* Configuration Details
+
+** Terminal Setup
+- Terminal: Default Linux Mint terminal
+- Shell: Fish Shell
+- Prompt: Starship
+- Multiplexer: Tmux
+- Font: JetBrainsMono Nerd Font
+
+** Development Tools
+- Editor: Neovim & VS Code
+- Git Configuration: Custom aliases and settings
+- Package Manager: APT
+
+** Key Features
+- Modern CLI tools (exa, bat, fd, ripgrep)
+- Git-centric workflow
+- Consistent development environment
+- Easy installation and management
+
+* Usage Tips
+
+** Stow Management
+#+BEGIN_SRC bash
+# Add new configs
+stow <package>
+
+# Remove configs
+stow -D <package>
+
+# Restow (remove and add again)
+stow -R <package>
+#+END_SRC
+
+** Updating
+#+BEGIN_SRC bash
+# Update repository
+git pull
+
+# Update system packages
+sudo apt update && sudo apt upgrade -y
+
+# Restow all configurations
+stow -R */
+#+END_SRC
+
+* Customization
+These dotfiles are personalized for my workflow but are designed to be easily customizable:
+
+1. Fork the repository
+2. Modify configurations as needed
+3. Adjust VS Code settings and extensions
+
+* Troubleshooting
+
+** Common Issues
+- Existing config files: Back up and remove existing configurations before stowing
+- Stow errors: Check for conflicting files in target locations
+- Permission issues: Ensure proper file permissions
+
+** Solutions
+#+BEGIN_SRC bash
+# Backup existing configs
+mv ~/.config/nvim ~/.config/nvim.backup
+
+# Check stow debug output
+stow -v <package>
+
+# Restore file permissions
+chmod -R u+w ~/dotfiles
+#+END_SRC
+
+* Maintenance
+Regular maintenance tasks:
+- Keep VS Code extensions list updated
+- Commit changes regularly
+- Test on fresh installations periodically
+
+* License
+MIT License – See LICENSE file for details.
+
+* Credits
+Thanks to the open source community and various dotfile repositories that inspired this configuration.
+
+
