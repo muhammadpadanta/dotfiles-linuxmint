@@ -1,0 +1,90 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[╭](#ffffff)\
+[](color_bg1)\
+$os\
+$username\
+[](bg:color_orange fg:color_bg1)\
+$directory\
+[](fg:color_orange bg:color_green)\
+$git_branch\
+$git_status\
+[](fg:color_green bg:color_aqua)\
+$c\
+$nodejs\
+$python\
+[](fg:color_aqua bg:color_red)\
+$cmd_duration\
+[ ](fg:color_red)\
+$line_break$character"""
+
+palette = 'gruvbox_dark'
+
+[palettes.gruvbox_dark]
+color_fg0 = '#fbf1c7'
+color_bg1 = '#3c3836'
+color_bg3 = '#665c54'
+color_blue = '#458588'
+color_aqua = '#689d6a'
+color_green = '#98971a'
+color_orange = '#d65d0e'
+color_purple = '#b16286'
+color_red = '#cc241d'
+color_yellow = '#d79921'
+
+[os]
+disabled = false
+style = "bg:color_bg1 fg:color_fg0"
+
+[os.symbols]
+Windows = "󰍲"
+Macos = ""
+Linux = "󰌽"
+Arch = "󰣇"
+
+[username]
+show_always = true
+style_user = "bg:color_bg1 fg:color_fg0"
+style_root = "bg:color_bg1 fg:color_fg0"
+format = '[ $user ]($style)'
+
+[directory]
+style = "fg:color_bg1 bg:color_orange"
+format = "[ $path ]($style)"
+truncation_length = 1
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "bg:color_aqua"
+format = '[[ $symbol $branch ](fg:color_bg1 bg:color_green)]($style)'
+
+[git_status]
+style = "bg:color_aqua"
+format = '[[($all_status$ahead_behind )](fg:color_bg1 bg:color_green)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:color_aqua"
+format = '[[ $symbol( $version) ](fg:color_bg1 bg:color_aqua)]($style)'
+
+[c]
+symbol = " "
+style = "bg:color_aqua"
+format = '[[ $symbol( $version) ](fg:color_bg1 bg:color_aqua)]($style)'
+
+[python]
+symbol = ""
+style = "bg:color_aqua"
+format = '[[ $symbol( $version) ](fg:color_bg1 bg:color_aqua)]($style)'
+
+[cmd_duration]
+min_time = 5
+style = "bg:color_orange"
+format = '[[ 󱎫 $duration ](fg:color_bg1 bg:color_red)]($style)'
+
+[character]
+success_symbol = "[╰─❯](#ffffff)"
+error_symbol = "[╰─×](#cc241d)"
+

@@ -1,0 +1,239 @@
+{
+  "workbench.editorLargeFileConfirmation": 10024,
+  "workbench.layoutControl.enabled": false,
+  "workbench.editor.showTabs": "single",
+  "workbench.tree.indent": 16,
+  "workbench.startupEditor": "none",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.list.smoothScrolling": true,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.closeEmptyGroups": false,
+
+  /** ------------ Editor Settings ------------ **/
+  "editor.hover.delay": 900,
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontSize": 13.5,
+  "editor.fontWeight": 450,
+  "editor.lineHeight": 26,
+  "editor.lineNumbers": "on",
+  "editor.folding": true,
+  "editor.glyphMargin": true,
+  "editor.guides.indentation": false,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.cursorStyle": "line",
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.minimap.enabled": false,
+  "editor.wordWrap": "on",
+  "editor.stickyScroll.enabled": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.smoothScrolling": true,
+  "editor.linkedEditing": true,
+  "editor.renderWhitespace": "selection",
+  "editor.semanticHighlighting.enabled": true,
+
+  /** ------------ Explorer Settings ------------ **/
+  "explorer.compactFolders": false,
+
+  /** ------------ Terminal Configurations ------------ **/
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.enableMultiLinePasteWarning": "always",
+  "terminal.integrated.cursorStyle": "block",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.minimumContrastRatio": 1,
+
+  /** ------------ Files & Search Configuration ------------ **/
+  "files.autoSave": "off",
+  "files.autoSaveDelay": 1000,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true
+  },
+  "search.smartCase": true,
+
+  /** ------------ Diff Settings ------------ **/
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": true,
+
+  /** ------------ Extension Specific Settings ------------ **/
+  // Git & GitLens
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "gitlens.hovers.enabled": true,
+
+  // Error Lens
+  "errorLens.enabled": true,
+  "errorLens.enabledDiagnosticLevels": ["error", "warning", "info"],
+
+  // Better Comments
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "//",
+      "color": "#474747",
+      "strikethrough": true,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    }
+  ],
+
+  /** ------------ Language Specific Settings ------------ **/
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off"
+  },
+
+  "dart.flutterHotReloadOnSave": "all",
+  "dart.hotReloadOnSave": "all",
+  "dart.previewFlutterUiGuides": true,
+
+  "[javascript][typescript][javascriptreact][typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
+  "[json][jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
+  /** ------------ Breadcrumbs Configurations ------------ **/
+  "breadcrumbs.enabled": false,
+  "breadcrumbs.symbolPath": "off",
+  "breadcrumbs.filePath": "on",
+
+  /** ------------ Theme & UI Configurations ------------ **/
+  "window.titleBarStyle": "custom",
+  "security.workspace.trust.untrustedFiles": "open",
+  "catppuccin.workbenchMode": "minimal",
+  "catppuccin.customUIColors": {
+    "mocha": {
+      "statusBar.foreground": "accent"
+    }
+  },
+  "workbench.colorCustomizations": {
+    "terminal.background": "#00000000"
+  },
+
+  /** ------------ Custom CSS & Neovim ------------ **/
+  "vscode_custom_css.imports": [
+    "file:///Users/muhammadpadanta/.vscode/vscode-custom/style.css",
+    "file:///Users/muhammadpadanta/.vscode/vscode-custom/script.js"
+  ],
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+
+  /** ------------ Additional Settings ------------ **/
+  "gopls": {
+    "ui.semanticTokens": true
+  },
+
+  "vscode_vibrancy.type": "auto",
+
+  "workbench.settings.applyToAllProfiles": [],
+  "git.openRepositoryInParentFolders": "never",
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "editor.accessibilitySupport": "off",
+  "extensions.trustedPublishers": [
+    "aaron-bond",
+    "adpyke",
+    "akamud",
+    "alexisvt",
+    "anseki",
+    "be5invis",
+    "bradlc",
+    "catppuccin",
+    "chadalen",
+    "chakrounanas",
+    "christian-kohler",
+    "chrmarti",
+    "dart-code",
+    "donjayamanne",
+    "dracula-theme",
+    "eamodio",
+    "ecmel",
+    "enkia",
+    "esbenp",
+    "formulahendry",
+    "golang",
+    "hzgood",
+    "inferrinizzard",
+    "jdinhlife",
+    "jeroen-meijer",
+    "marcelovelasquez",
+    "mhutchie",
+    "miguelsolorio",
+    "mikaelkristiansson87",
+    "monish",
+    "njqdev",
+    "pflannery",
+    "pkief",
+    "postman",
+    "pranaygp",
+    "rvest",
+    "shd101wyy",
+    "sporiley",
+    "steoates",
+    "tomoki1207",
+    "tonybaloney",
+    "usernamehw",
+    "vspacecode",
+    "wix",
+    "yandeu",
+    "zignd"
+  ],
+  "python.defaultInterpreterPath": "/Users/muhammadpadanta/.local/share/mise/installs/python/3.11.11/bin/python",
+  "workbench.activityBar.location": "hidden",
+  "terminal.integrated.gpuAcceleration": "off"
+}
